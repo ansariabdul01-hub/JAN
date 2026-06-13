@@ -5,6 +5,7 @@ A modern, responsive web application for managing First Information Reports (FIR
 ## Features
 
 ### 🔐 Authentication & User Management
+
 - User registration and login
 - JWT-based authentication
 - User profile management
@@ -12,6 +13,7 @@ A modern, responsive web application for managing First Information Reports (FIR
 - Password hashing with bcrypt
 
 ### 📝 FIR Management
+
 - Submit FIR with comprehensive details
 - Track FIR status (Pending, Under Review, Approved, Rejected, Resolved)
 - View detailed FIR information
@@ -20,24 +22,28 @@ A modern, responsive web application for managing First Information Reports (FIR
 - Case number assignment
 
 ### 🔗 Blockchain Integration
+
 - SHA-256 hash generation for FIR data
 - Blockchain transaction ID generation
 - Immutable record verification
 - Tamper-proof data storage
 
 ### 🎨 User Interface
+
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
 - **Dark/Light Mode**: Toggle between themes with persistent preference
 - **Multi-language Support**: English and Hindi (हिंदी)
 - **Modern UI**: Beautiful gradient cards, smooth animations, and intuitive navigation
 
 ### 🤖 Chatbot Assistant
+
 - Interactive chatbot for user guidance
 - Help with FIR submission process
 - Answers common questions
 - Step-by-step assistance
 
 ### 📊 Dashboard & Analytics
+
 - Overview statistics (Total, Pending, Approved, Resolved FIRs)
 - Recent FIRs display
 - Quick access to all features
@@ -46,6 +52,7 @@ A modern, responsive web application for managing First Information Reports (FIR
 ## Tech Stack
 
 ### Backend
+
 - **Node.js** with Express.js
 - **MongoDB** with Mongoose
 - **JWT** for authentication
@@ -53,6 +60,7 @@ A modern, responsive web application for managing First Information Reports (FIR
 - **Express Validator** for input validation
 
 ### Frontend
+
 - **React 18** with React Router
 - **Axios** for API calls
 - **React Icons** for icons
@@ -63,6 +71,7 @@ A modern, responsive web application for managing First Information Reports (FIR
 ## Installation & Setup
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - MongoDB (local or MongoDB Atlas)
 - npm or yarn
@@ -112,17 +121,20 @@ npm run dev
 ```
 
 This will start:
+
 - Backend server on `http://localhost:5000`
 - React frontend on `http://localhost:3000`
 
 #### Run Separately
 
 **Backend only:**
+
 ```bash
 npm run server
 ```
 
 **Frontend only:**
+
 ```bash
 npm run client
 ```
@@ -130,6 +142,7 @@ npm run client
 ### Step 5: Access the Application
 
 Open your browser and navigate to:
+
 ```
 http://localhost:3000
 ```
@@ -168,23 +181,27 @@ PRO/
 ## API Endpoints
 
 ### Authentication
+
 - `POST /api/auth/register` - Register new user
 - `POST /api/auth/login` - Login user
 - `GET /api/auth/me` - Get current user (Protected)
 - `POST /api/auth/logout` - Logout user (Protected)
 
 ### FIR Management
+
 - `POST /api/fir/submit` - Submit new FIR (Protected)
 - `GET /api/fir/my-firs` - Get user's FIRs (Protected)
 - `GET /api/fir/:id` - Get FIR details (Protected)
 - `PUT /api/fir/:id/status` - Update FIR status (Officer/Admin only)
 
 ### User Profile
+
 - `GET /api/user/profile` - Get user profile with stats (Protected)
 - `PUT /api/user/profile` - Update user profile (Protected)
 - `PUT /api/user/online-status` - Update online status (Protected)
 
 ### Blockchain
+
 - `POST /api/blockchain/verify` - Verify blockchain hash (Protected)
 
 ## Usage Guide
@@ -209,21 +226,25 @@ PRO/
 ## Features in Detail
 
 ### Dark/Light Mode
+
 - Toggle button in sidebar
 - Preference saved in localStorage and database
 - Smooth theme transitions
 
 ### Language Selection
+
 - Switch between English and Hindi
 - All UI text translated
 - Preference saved per user
 
 ### Online Status
+
 - Real-time online/offline indicator
 - Last seen timestamp
 - Automatic status updates
 
 ### Blockchain Verification
+
 - Each FIR gets a unique blockchain hash
 - Hash is generated using SHA-256
 - Transaction ID for tracking
@@ -258,15 +279,18 @@ The blockchain service in `server/services/blockchain.js` currently uses SHA-256
 ## Troubleshooting
 
 ### MongoDB Connection Issues
+
 - Ensure MongoDB is running
 - Check connection string in `.env`
 - Verify MongoDB port (default: 27017)
 
 ### Port Already in Use
+
 - Change `PORT` in `.env` for backend
 - Change React port: `PORT=3001 npm start` in client directory
 
 ### Authentication Errors
+
 - Clear browser localStorage
 - Check JWT_SECRET in `.env`
 - Verify token expiration
@@ -305,4 +329,3 @@ For issues or questions, please check the code comments or create an issue in th
 ---
 
 **Built with ❤️ for secure and transparent FIR management**
-
